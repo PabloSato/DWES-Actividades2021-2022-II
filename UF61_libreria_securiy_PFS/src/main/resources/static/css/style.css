@@ -1,0 +1,653 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: spaceMono;
+	src: url(fonts/par2/Space_Mono/SpaceMono-Regular.ttf);
+}
+
+@font-face {
+	font-family: spaceMonoBold;
+	src: url(fonts/par2/Space_Mono/SpaceMono-Bold.ttf);
+}
+
+@font-face {
+	font-family: misterio;
+	src: url(fonts/MysteryForest.ttf);
+}
+
+@font-face {
+	font-family: bio;
+	src: url(fonts/par2/BioRhyme/BioRhyme-Light.ttf);
+}
+
+@font-face {
+	font-family: bioBold;
+	src: url(fonts/par2/BioRhyme/BioRhyme-Bold.ttf);
+}
+
+@font-face {
+	font-family: halant;
+	src: url(fonts/par1/Halant/Halant-Regular.ttf);
+}
+
+@font-face {
+	font-family: halantBold;
+	src: url(fonts/par1/Halant/Halant-Bold.ttf);
+}
+
+@font-face {
+	font-family: halantSemBold;
+	src: url(fonts/par1/Halant/Halant-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: nunito;
+	src: url(fonts/par1/Nunito_Sans/NunitoSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: titillium;
+	src: url(fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	background: url('../img/fondo1.jpeg') center;
+	background-size: cover;
+	background-attachment: fixed;
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+body {
+	color: #fff;
+	height: 100%;
+	font-family: 'spaceMono';
+}
+
+p, h4 {
+	font-family: 'bio';
+}
+
+span {
+	color: #e14607;
+}
+
+h3 {
+	font-family: 'titillium';
+}
+
+h5 {
+	font-family: 'spaceMonoBold';
+	font-size: 1.2rem;
+	color: #000;
+	font-weight: 100;
+}
+
+.money {
+	color: #000;
+	font-family: 'bioBold';
+}
+
+a {
+	text-decoration: none;
+}
+
+.ver {
+	color: #26292e;
+}
+
+.edit {
+	color: #e14607;
+}
+
+.eli {
+	color: #b21a1a;
+}
+
+.black {
+	color: #000;
+	font-family: 'spaceMonoBold';
+}
+
+.ver:hover, .edit:hover, .eli:hover {
+	text-decoration: underline;
+}
+
+.right {
+	text-align: right;
+}
+
+.fondo_claro {
+	background-color: #2f3238;
+}
+
+.fondo_oscuro {
+	background-color: #26292e;
+}
+
+/*--------------------------------------------------------- HEADER*/
+header {
+	position: fixed;
+	background-color: #26282e;
+	width: 100%;
+	padding: 0.5rem;
+	z-index: 999;
+	display: grid;
+	grid-template-columns: 0.2fr 3fr;
+	gap: 0.1rem;
+}
+
+header>#logo {
+	padding-left: 2rem;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+header>nav {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	margin-right: 1rem;
+}
+
+header>nav>ul {
+	list-style: none;
+	display: flex;
+	text-align: center;
+}
+
+header>nav>ul>li {
+	display: inline-block;
+	flex-grow: 1;
+	font-size: 1.2rem;
+}
+
+header>nav>ul>li>a {
+	display: block;
+	padding: 0 1rem;
+	text-decoration: none;
+	color: #fff;
+}
+
+header>nav>ul>li>a:hover {
+	color: #e14607;
+}
+/*--------------------------------------------------------- PORTADA*/
+.portada {
+	width: 100%;
+	height: 100%;
+	display: table;
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.portada>h2 {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.portada>h2>a {
+	font-size: 3.5rem;
+	font-family: 'SpaceMono-Bold';
+	letter-spacing: 0.1rem;
+	color: #fff;
+	border: 0.1rem solid rgba(255, 255, 255, 0.1);
+	padding: 1rem 2rem;
+}
+
+.portada>h2>a:hover {
+	background: rgba(0, 0, 0, 0.2);
+	color: rgba(255, 255, 255, 0.8);
+	border: 0.1rem solid rgba(255, 255, 255, 0.8);
+}
+/*--------------------------------------- BUSCADOR*/
+.buscador {
+	width: 70%;
+	margin: 0.5rem auto 1rem;
+}
+
+.buscador>form {
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+}
+.buscador > .titulos > label::before {
+  content: 'Buscar en Libros';
+}
+.buscador > .temas > label::before {
+  content: 'Buscar en Temas';
+}
+
+.buscador>form>#filtro>input, .buscador>form>#filtro2>select {
+	padding: 0.5rem 1rem;
+}
+
+.buscador>form>#filtro>input, .buscador>form>#filtro2>select {
+	width: 100%;
+}
+
+.buscador>form>label {
+	padding: 0.2rem 1rem;
+	height: 2.2rem;
+	background-color: #fff;
+	color: #000;
+	border: 0.1rem solid #000;
+	border-radius: 1rem 0 0 1rem;
+}
+
+.buscador>form>input[type='submit'] {
+	border-radius: 0 1rem 1rem 0;
+}
+
+/*--------------------------------------------------------- PORTADA*/
+section {
+	width: 100%;
+	min-height: 100vh;
+	padding: 3.5rem;
+}
+
+section>.user {
+	position: fixed;
+	display: block;
+	right: 5rem;
+}
+
+section>h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 3rem;
+	font-weight: 400;
+}
+
+section h3 {
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 200;
+}
+
+.contenido {
+	width: 90%;
+	margin: 0 auto;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 4fr 0.7fr;
+	gap: 1.3rem;
+}
+
+.conten {
+	width: 70%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.centro h4, .derecha h4 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+	border-bottom: 0.1rem solid grey;
+}
+/*-------------------------------------- TABLA*/
+.contenedor {
+	width: 80%;
+	margin: 1rem auto;
+}
+
+.centro {
+	width: 100%;
+	height: 100%;
+}
+
+.small {
+	width: 70%;
+	margin: 0 auto;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #f9f5ee;
+}
+
+td, th {
+	border: 0.1rem solid #b21a1a;
+	text-align: center;
+	padding: 0.2rem;
+	color: lightslategrey;
+}
+
+.cover {
+	width: 10rem;
+}
+
+th {
+	color: #b21a1a;
+	font-family: 'bioBold';
+}
+
+td>.img {
+	width: 100%;
+	min-height: 10rem;
+	max-height: 10rem;
+}
+
+td>.img>img {
+	width: 80%;
+	height: 10rem;
+}
+
+/*-------------------------------------- MENU DERECHA*/
+.derecha {
+	width: 100%;
+	height: 100%;
+	text-align: right;
+}
+
+.derecha nav ul {
+	margin-top: 2rem;
+	list-style: none;
+	display: grid;
+	grid-auto-rows: auto;
+	gap: 3rem;
+}
+
+.derecha nav ul a {
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1rem;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+}
+
+.derecha nav ul a:hover {
+	color: darkgrey;
+	cursor: pointer;
+	padding-right: 1rem;
+}
+/*--------------------------------------------------------- DETALLE*/
+.detalle {
+	width: 55%;
+	margin: 1rem auto;
+	min-height: 53rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.5rem;
+}
+
+.big {
+	width: 70%;
+}
+
+.cubierta {
+	width: 100%;
+}
+
+.cubierta>img {
+	max-width: 30rem;
+	max-height: 40rem;
+	border: 0.1rem solid #b21a1a;
+}
+
+.data {
+	width: 100%;
+}
+
+.data>h2 {
+	border-bottom: 0.1rem solid #fff;
+	font-size: 1.8rem;
+	margin-bottom: 0.5rem;
+}
+
+.data>.info {
+	padding-left: 1rem;
+	color: darkgray;
+	font-size: 1.3rem;
+}
+
+.data>.info>h3 {
+	text-align: left;
+}
+
+.data>.list-pedidos {
+	margin-top: 2.5rem;
+	text-align: left;
+	padding: 0 2rem;
+	width: 100%;
+	color: darkgray;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	font-size: 1.2rem;
+}
+
+.data>.list-pedidos>p {
+	width: 100%;
+}
+
+.data>.list-pedidos>p>span {
+	margin-left: 1rem;
+}
+
+.data>.list-pedidos>p>a {
+	display: block;
+}
+
+.data>.list-pedidos>p>a:hover {
+	color: #b21a1a;
+}
+/*--------------------------------------------------------- FORMU*/
+.formu {
+	width: 60%;
+	margin: 1rem auto;
+	text-align: center;
+}
+
+.formu>h2 {
+	font-size: 2rem;
+	text-transform: uppercase;
+	border-bottom: 0.1rem solid #fff;
+}
+
+fieldset {
+	margin-top: 2rem;
+	padding: 1rem;
+}
+
+form>h3 {
+	font-size: 1.5rem;
+	text-align: left;
+}
+
+form>.campo {
+	width: 100%;
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	font-size: 1rem;
+}
+
+form>.campoSub {
+	width: 50%;
+	padding: 1rem;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+form>.campo>input, form>.campo>label {
+	padding: 0.2rem;
+}
+
+form>.campo>.radio {
+	text-align: left;
+	padding: 0.2rem;
+}
+
+input[type='radio'] {
+	margin-right: 0.3rem;
+}
+
+input[type='submit'], input[type='reset'] {
+	padding: 0.2rem 1rem;
+	cursor: pointer;
+}
+
+input[type='submit']:hover {
+	color: antiquewhite;
+	background-color: #26292e;
+	border: 0.1rem solid antiquewhite;
+}
+
+input[type='reset']:hover {
+	color: #b21a1a;
+	background-color: #26292e;
+	border: 0.1rem solid #e14607;
+} /*--------------------------------------------------------- CARRITO*/
+.comprar {
+	width: 35%;
+	margin: 1rem auto;
+	text-align: center;
+}
+
+.comprar button, .comprar .msg {
+	width: 100%;
+	cursor: pointer;
+}
+
+.comprar button, .comprar .add {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding: 0.5rem;
+	margin: 0 auto;
+	width: 50%;
+}
+
+.comprar .add a {
+	color: #000;
+	display: block;
+	width: 100%;
+}
+
+.comprar .add a:hover {
+	color: antiquewhite;
+}
+
+.comprar button:hover {
+	color: antiquewhite;
+	background-color: #26292e;
+	border: 0.1rem solid antiquewhite;
+}
+.comprar > a {
+  width: 100%;
+  display: block;
+  margin: 2rem 0;
+  border: 0.1rem solid #000;
+  text-decoration: none;
+  color: #000;
+  padding: 0.5rem;
+  background-color: antiquewhite;
+  cursor: pointer;
+}
+.comprar > a:hover {
+  color: antiquewhite;
+  background-color: #26292e;
+  border: 0.1rem solid antiquewhite;
+}
+/*
+.add {
+	width: 35%;
+	margin: 2rem;
+	border: 0.1rem solid #000;
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding: 0.1rem;
+	background-color: antiquewhite;
+	cursor: pointer;
+}
+
+.add:hover {
+	color: antiquewhite;
+	background-color: #26292e;
+	border: 0.1rem solid antiquewhite;
+}
+*/
+/*--------------------------------------------------------- MEDIA QUERIES */
+@media screen and (max-width: 1482px) and (min-width: 1289px) {
+  section {
+    padding: 3.5rem 3rem;
+  }
+  .buscador > .titulos > label::before {
+    content: 'Buscar Libros';
+  }
+  .buscador > .temas > label::before {
+    content: 'Buscar Temas';
+  }
+  .contenido {
+    width: 100%;
+
+    gap: 1rem;
+  }
+  .detalle {
+    width: 75%;
+    gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 1288px) and (min-width: 1150px) {
+  section {
+    padding: 3rem 1rem;
+  }
+  .buscador > .titulos > label::before {
+    content: 'Libros';
+  }
+  .buscador > .temas > label::before {
+    content: 'Temas';
+  }
+  .contenido {
+    width: 100%;
+
+    gap: 0.1rem;
+  }
+  .detalle {
+    width: 75%;
+    gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 1150px) {
+  section {
+    padding: 3rem 1rem;
+  }
+  .buscador > .titulos > label::before {
+    content: 'Libros';
+  }
+  .buscador > .temas > label::before {
+    content: 'Temas';
+  }
+  .contenido {
+    width: 100%;
+
+    gap: 0.1rem;
+  }
+
+  .derecha nav ul a:hover {
+    padding-right: 0rem;
+  }
+  .detalle {
+    width: 75%;
+    gap: 0.5rem;
+  }
+}

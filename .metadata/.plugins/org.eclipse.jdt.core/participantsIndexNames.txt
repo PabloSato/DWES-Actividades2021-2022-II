@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+/Volumes/Samsung SSD/Mis Documentos/DAW/Eclipse/DWES - Actividades II/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2970902161.index
+/UF4_cajero_PFS/src/main/java
+/Volumes/Samsung SSD/Mis Documentos/DAW/Eclipse/DWES - Actividades II/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/231676119.index
+/UF61_libreria_securiy_PFS/src/main/java
